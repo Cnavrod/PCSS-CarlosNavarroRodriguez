@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- 
+    Metadatos del documento
+    Configuramos el viewport para que el sitio sea responsive
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV de Carlos Navarro</title>
+  <!-- Enlace a la hoja de estilos externa -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 
+    Encabezado principal con título y menú de navegación
+    Cada enlace usa data-section para el manejo con JavaScript (si lo deseas)
+  -->
+  <header>
+    <h1>Currículum de Carlos Navarro</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">Sobre Mí</a></li>
+        <li><a href="#aptitudes">Aptitudes</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#educacion">Educación</a></li>
+        <li><a href="#voluntariado">Voluntariado</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección Sobre Mí (con foto y breve descripción) -->
+  <section id="about" class="active-section">
+    <h2>Sobre Mí</h2>
+    <div class="about-container">
+      <!-- Imagen de perfil -->
+      <img src="img/mifoto.jpg" alt="Foto de Carlos" class="profile-pic">
+
+      <!-- Texto de presentación -->
+      <div class="about-text">
+        <p>
+          ¡Hola! Soy Carlos Navarro. Apasionado de la tecnología, el desarrollo web y el trabajo en equipo. 
+          Me encanta buscar soluciones creativas y eficientes para los problemas cotidianos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Aptitudes -->
+  <section id="aptitudes">
+    <h2>Aptitudes</h2>
+    <p>
+      Soy una persona a la que el trabajo en equipo no le resulta un problema; soy bastante abierto y 
+      extrovertido. Tengo una alta capacidad resolutiva y un dominio sólido de la tecnología.
+    </p>
+  </section>
+
+  <!-- Sección Experiencia (cada experiencia en una card con imagen) -->
+  <section id="experiencia">
+    <h2>Experiencia</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="img/experience1.jpg" alt="Imagen Leaders" />
+        <div class="card-content">
+          <h3>Leaders (2022)</h3>
+          <p>Manejo de clases online y equipo audiovisual en Icada para mandos intermedios.</p>
+          <p>Duración: 9 meses</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/experience2.jpg" alt="Imagen Ayesa" />
+        <div class="card-content">
+          <h3>Ayesa (2023)</h3>
+          <p>Servicio técnico y microinformática, trabajando en equipo y bajo presión.</p>
+          <p>Duración: 4 meses</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/experience3.jpg" alt="Imagen Fundación San Telmo" />
+        <div class="card-content">
+          <h3>Fundación San Telmo (2024)</h3>
+          <p>Técnico de medios audiovisuales. Familiarizado con marcas como Shure, Bosch, Extron, Blackmagic, etc.</p>
+          <p>Duración: Desde Septiembre 2024 hasta la actualidad</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Educación -->
+  <section id="educacion">
+    <h2>Educación</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="img/studies1.jpg" alt="Imagen SMIR" />
+        <div class="card-content">
+          <h3>Grado Medio SMIR (2023)</h3>
+          <p>Sistemas Microinformáticos y Redes, ADA ITS.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/studies2.jpg" alt="Imagen Inglés" />
+        <div class="card-content">
+          <h3>Inglés Nivel B2 (2023)</h3>
+          <p>Examen Cambridge en City School.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/studies3.jpg" alt="Imagen Leaders" />
+        <div class="card-content">
+          <h3>Leaders (2022)</h3>
+          <p>Curso en Icada para mandos medios.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/studies4.jpg" alt="Imagen DAW" />
+        <div class="card-content">
+          <h3>Grado Superior DAW</h3>
+          <p>Cursando Desarrollo de Aplicaciones Web en ADA ITS.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Voluntariado -->
+  <section id="voluntariado">
+    <h2>Voluntariado</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="img/volunteer1.jpg" alt="Imagen voluntariado" />
+        <div class="card-content">
+          <h3>Actividades Scout</h3>
+          <p>Llevo más de 6 años en un grupo scout, participando en recogida de juguetes, ayuda en centros de mayores y protectoras de animales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

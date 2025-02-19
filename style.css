@@ -1,0 +1,176 @@
+/* 
+  En esta hoja de estilos:
+  - Ajustamos el layout para que sea responsive
+  - Comentamos cada sección para describir su intención
+*/
+
+/* 
+  RESETEO BÁSICO Y FUENTE
+  Ajustamos margin, padding y box-sizing em todas las etiquetas,
+  y definimos una fuente por defecto.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 
+  ESTILO DE BODY
+  Usamos un degradado como fondo y un color de texto suave
+*/
+body {
+  font-family: Arial, sans-serif; /* Arial, tal como pide la guía */
+  background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+  color: #333;
+  /* Para optimizar la legibilidad */
+  line-height: 1.6;
+}
+
+/* 
+  CABECERA
+  Fondo oscuro y texto claro para cierto contraste
+*/
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+/* NAVEGACIÓN */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: #444;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+nav a:hover {
+  background: #666;
+}
+
+/* 
+  SECCIONES
+  Por defecto ocultamos el overflow en pantallas pequeñas y
+  mantenemos las secciones con un fondo blanco y sombra sutil
+*/
+section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+/* 
+  SECCIÓN ACTIVA
+  Mantiene visibilidad si navegas con anclas o scripts
+*/
+.active-section {
+  display: block;
+}
+
+/* 
+  ENCABEZADOS
+  Subrayado suave
+*/
+h2 {
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+/* 
+  CLASES "ABOUT"
+  Sección de información personal con foto y texto 
+*/
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+
+/* 
+  TARJETAS (Card)
+  Usamos flex-wrap para que las tarjetas se adapten en pantallas pequeñas
+*/
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center; /* Centrado */
+}
+.card {
+  background: #fdfdfd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 280px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+.card img {
+  width: 100%;
+  height: auto; 
+  object-fit: cover; 
+  max-height: 200px;
+}
+.card-content {
+  padding: 1rem;
+}
+.card-content h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* 
+  MEDIA QUERIES
+  Ajustamos estilos para pantallas pequeñas
+  Reducimos padding y margenes para mejor encaje
+*/
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+  nav ul {
+    flex-wrap: wrap;
+  }
+  nav a {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .about-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .profile-pic {
+    margin-bottom: 1rem;
+  }
+  section {
+    margin: 1rem;
+    padding: 0.8rem;
+  }
+  .card {
+    width: 100%; /* Que ocupe todo el ancho en móvil */
+    margin: 0 auto;
+  }
+}
