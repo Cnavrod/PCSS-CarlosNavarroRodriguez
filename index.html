@@ -1,21 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- 
-    Metadatos del documento
-    Configuramos el viewport para que el sitio sea responsive
-  -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV de Carlos Navarro</title>
-  <!-- Enlace a la hoja de estilos externa -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- 
-    Encabezado principal con título y menú de navegación
-    Cada enlace usa data-section para el manejo con JavaScript (si lo deseas)
-  -->
   <header>
     <h1>Currículum de Carlos Navarro</h1>
     <nav>
@@ -29,14 +20,10 @@
     </nav>
   </header>
 
-  <!-- Sección Sobre Mí (con foto y breve descripción) -->
   <section id="about" class="active-section">
     <h2>Sobre Mí</h2>
     <div class="about-container">
-      <!-- Imagen de perfil -->
-      <img src="img/mifoto.jpg" alt="Foto de Carlos" class="profile-pic">
-
-      <!-- Texto de presentación -->
+      <img src="img/mifoto.jpg" alt="Foto de Carlos" class="profile-pic" id="profile-pic">
       <div class="about-text">
         <p>
           ¡Hola! Soy Carlos Navarro. Apasionado de la tecnología, el desarrollo web y el trabajo en equipo. 
@@ -46,7 +33,6 @@
     </div>
   </section>
 
-  <!-- Sección Aptitudes -->
   <section id="aptitudes">
     <h2>Aptitudes</h2>
     <p>
@@ -55,7 +41,6 @@
     </p>
   </section>
 
-  <!-- Sección Experiencia (cada experiencia en una card con imagen) -->
   <section id="experiencia">
     <h2>Experiencia</h2>
     <div class="card-container">
@@ -86,7 +71,6 @@
     </div>
   </section>
 
-  <!-- Sección Educación -->
   <section id="educacion">
     <h2>Educación</h2>
     <div class="card-container">
@@ -112,7 +96,7 @@
         </div>
       </div>
       <div class="card">
-        <img src="img/studies1.jpg" alt="Imagen DAW" />
+        <img src="img/studies4.jpg" alt="Imagen DAW" />
         <div class="card-content">
           <h3>Grado Superior DAW</h3>
           <p>Cursando Desarrollo de Aplicaciones Web en ADA ITS.</p>
@@ -121,7 +105,6 @@
     </div>
   </section>
 
-  <!-- Sección Voluntariado -->
   <section id="voluntariado">
     <h2>Voluntariado</h2>
     <div class="card-container">
@@ -135,5 +118,6 @@
     </div>
   </section>
 
+  <script src="script.js"></script>
 </body>
 </html>
