@@ -23,7 +23,7 @@ links.forEach(link => {
 profilePic.addEventListener('click', () => {
   clickCount++;
   if (clickCount === 5) {
-    profilePic.src = 'img/newphoto.jpg'; // Asegúrate de tener esta imagen en la carpeta img
+    profilePic.src = 'img/ontiveros.jpg'; // Asegúrate de tener esta imagen en la carpeta img
     clickCount = 0;
   }
 });
