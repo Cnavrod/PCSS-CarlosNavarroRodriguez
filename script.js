@@ -4,30 +4,7 @@ const profilePic = document.getElementById('profile-pic');
 let clickCount = 0;
 let navClickCount = 0;
 
-links.forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    navClickCount++;
-    if (navClickCount === 10) {
-      showFullScreenImage('img/fali.jpg'); // Asegúrate de tener esta imagen en la carpeta img
-      navClickCount = 0;
-    }
-    const target = link.getAttribute('href').substring(1);
-    sections.forEach(sec => sec.classList.remove('active-section'));
-    const targetSection = document.getElementById(target);
-    targetSection.classList.add('active-section');
-    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
-
-profilePic.addEventListener('click', () => {
-  clickCount++;
-  if (clickCount === 5) {
-    profilePic.src = 'img/ontiveros.jpg'; // Asegúrate de tener esta imagen en la carpeta img
-    clickCount = 0;
-  }
-});
-
+// Función para mostrar imagen en pantalla completa
 function showFullScreenImage(src) {
   const img = document.createElement('img');
   img.src = src;
@@ -51,3 +28,42 @@ function showFullScreenImage(src) {
   
   document.body.appendChild(img);
 }
+
+// Manejo de clics en los enlaces de navegación
+links.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    navClickCount++;
+    if (navClickCount === 10) {
+      showFullScreenImage('img/fali.jpg'); // Asegúrate de tener esta imagen en la carpeta img
+      navClickCount = 0;
+    }
+    const target = link.getAttribute('href').substring(1);
+    sections.forEach(sec => sec.classList.remove('active-section'));
+    const targetSection = document.getElementById(target);
+    targetSection.classList.add('active-section');
+    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+// Manejo de clics en la imagen de perfil
+profilePic.addEventListener('click', () => {
+  clickCount++;
+  if (clickCount === 5) {
+    profilePic.src = 'img/ontiveros.jpg'; // Asegúrate de tener esta imagen en la carpeta img
+    clickCount = 0;
+  }
+});
+
+// Intersection Observer para mostrar secciones al hacer scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active-section');
+    }
+  });
+}, { threshold: 0.1 });
+
+sections.forEach(section => {
+  observer.observe(section);
+});
