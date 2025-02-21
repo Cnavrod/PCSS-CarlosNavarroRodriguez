@@ -2,7 +2,19 @@ const links = document.querySelectorAll('nav a');
 const sections = document.querySelectorAll('section');
 const profilePic = document.getElementById('profile-pic');
 let clickCount = 0;
-let navClickCount = 0;
+
+// Objeto para contar los clics por cada botón de navegación
+let navClickCounts = {};
+
+// Mapeo de id de sección a imagen completa
+const fullImages = {
+  about: 'img/fali.jpg',
+  habilidades: 'img/ontiveros.jpg',
+  aptitudes: 'img/churumbel.jpg',
+  experiencia: 'img/brian.jpg',
+  educacion: 'img/chris.jpg',
+  voluntariado: 'img/diak.jpg'
+};
 
 // Función para mostrar imagen en pantalla completa
 function showFullScreenImage(src) {
@@ -33,13 +45,22 @@ function showFullScreenImage(src) {
 links.forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
-    navClickCount++;
-    if (navClickCount === 10) {
-      showFullScreenImage('img/fali.jpg'); // Asegúrate de tener esta imagen en la carpeta img
-      navClickCount = 0;
-    }
     const target = link.getAttribute('href').substring(1);
-    // Simplemente hacemos scroll sin ocultar los demás apartados
+    
+    // Inicializamos el contador para esta sección si no existe
+    if (!navClickCounts[target]) {
+      navClickCounts[target] = 0;
+    }
+    navClickCounts[target]++;
+    if (navClickCounts[target] === 10) {
+      // Si existe una imagen para esta sección se muestra en pantalla completa
+      if (fullImages[target]) {
+        showFullScreenImage(fullImages[target]);
+      }
+      navClickCounts[target] = 0;
+    }
+    
+    // Realizamos el scroll hacia la sección sin ocultar nada
     const targetSection = document.getElementById(target);
     targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
