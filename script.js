@@ -39,9 +39,8 @@ links.forEach(link => {
       navClickCount = 0;
     }
     const target = link.getAttribute('href').substring(1);
-    sections.forEach(sec => sec.classList.remove('active-section'));
+    // Simplemente hacemos scroll sin ocultar los demás apartados
     const targetSection = document.getElementById(target);
-    targetSection.classList.add('active-section');
     targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
