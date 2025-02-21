@@ -30,6 +30,10 @@ body {
   CABECERA
   Fondo oscuro y texto claro para cierto contraste
 */
+.bold-strong {
+  font-weight: 1200;
+}
+
 header {
   background-color: #21252b;
   color: #61dafb;
