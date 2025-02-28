@@ -180,7 +180,7 @@ h2 {
     justify-content: center; /* Centra los elementos */
   }
   nav li {
-    flex: 1 1 30%; /* Cada elemento ocupa aproximadamente un tercio del ancho */
+    flex: 1 1 33%; /* Cada elemento ocupa un tercio del ancho */
     display: flex;
     justify-content: center;
     max-width: 33%; /* Limita el ancho máximo de cada elemento */
@@ -211,10 +211,10 @@ h2 {
 @media (min-width: 769px) and (max-width: 1024px) {
   nav ul {
     flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
-    justify-content: space-around; /* Distribuye los elementos uniformemente */
+    justify-content: center; /* Centra los elementos */
   }
   nav li {
-    flex: 1 1 30%; /* Cada elemento ocupa aproximadamente un tercio del ancho */
+    flex: 1 1 33%; /* Cada elemento ocupa un tercio del ancho */
     display: flex;
     justify-content: center;
     max-width: 33%; /* Limita el ancho máximo de cada elemento */
@@ -222,5 +222,26 @@ h2 {
   nav a {
     padding: 0.5rem;
     margin-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  header {
+    padding: 1rem; /* Restaura el padding en pantallas grandes */
+  }
+  header h1 {
+    font-size: 2rem; /* Restaura el tamaño de la fuente en pantallas grandes */
+  }
+  nav ul {
+    flex-direction: row; /* Asegura que los elementos estén en una sola fila */
+    justify-content: center; /* Centra los elementos */
+  }
+  nav li {
+    flex: 1; /* Cada elemento ocupa el mismo espacio */
+    max-width: none; /* Elimina la limitación del ancho máximo */
+  }
+  nav a {
+    padding: 0.5rem 1rem; /* Restaura el padding en pantallas grandes */
+    margin-bottom: 0; /* Elimina el margen inferior */
   }
 }
