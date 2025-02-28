@@ -56,6 +56,12 @@ nav ul {
   margin-top: 1rem;
   flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
 }
+nav li {
+  flex: 1 1 30%; /* Cada elemento ocupa aproximadamente un tercio del ancho */
+  display: flex;
+  justify-content: center;
+  max-width: 33%; /* Limita el ancho máximo de cada elemento */
+}
 nav a {
   color: #61dafb;
   text-decoration: none;
@@ -174,9 +180,10 @@ h2 {
     justify-content: center; /* Centra los elementos */
   }
   nav li {
-    flex: 1 1 33%; /* Cada elemento ocupa un tercio del ancho */
+    flex: 1 1 30%; /* Cada elemento ocupa aproximadamente un tercio del ancho */
     display: flex;
     justify-content: center;
+    max-width: 33%; /* Limita el ancho máximo de cada elemento */
   }
   nav a {
     padding: 0.5rem;
@@ -207,9 +214,10 @@ h2 {
     justify-content: space-around; /* Distribuye los elementos uniformemente */
   }
   nav li {
-    flex: 1 1 33%; /* Cada elemento ocupa un tercio del ancho */
+    flex: 1 1 30%; /* Cada elemento ocupa aproximadamente un tercio del ancho */
     display: flex;
     justify-content: center;
+    max-width: 33%; /* Limita el ancho máximo de cada elemento */
   }
   nav a {
     padding: 0.5rem;
