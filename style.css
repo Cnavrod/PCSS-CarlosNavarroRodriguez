@@ -54,6 +54,7 @@ nav ul {
   list-style: none;
   gap: 1rem;
   margin-top: 1rem;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
 }
 nav a {
   color: #61dafb;
@@ -160,16 +161,19 @@ h2 {
   Ajustamos estilos para pantallas pequeñas
   Reducimos padding y margenes para mejor encaje
 */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   header h1 {
     font-size: 1.5rem;
   }
   nav ul {
-    flex-wrap: wrap;
+    flex-direction: column; /* Cambia la dirección a columna */
+    align-items: center; /* Centra los elementos */
   }
   nav a {
     padding: 0.5rem;
     margin-bottom: 0.5rem;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    text-align: center; /* Centra el texto */
   }
   .about-container {
     flex-direction: column;
@@ -185,5 +189,16 @@ h2 {
   .card {
     width: 100%; /* Que ocupe todo el ancho en móvil */
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  nav ul {
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+    justify-content: space-around; /* Distribuye los elementos uniformemente */
+  }
+  nav a {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 }
