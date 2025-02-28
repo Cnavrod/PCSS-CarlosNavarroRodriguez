@@ -169,13 +169,19 @@ h2 {
     font-size: 1.2rem; /* Reduce el tamaño de la fuente en dispositivos móviles */
   }
   nav ul {
-    flex-direction: column; /* Cambia la dirección a columna */
-    align-items: center; /* Centra los elementos */
+    flex-direction: row; /* Cambia la dirección a fila */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+    justify-content: center; /* Centra los elementos */
+  }
+  nav li {
+    flex: 1 1 33%; /* Cada elemento ocupa un tercio del ancho */
+    display: flex;
+    justify-content: center;
   }
   nav a {
     padding: 0.5rem;
     margin-bottom: 0.5rem;
-    width: 100%; /* Ocupa todo el ancho disponible */
+    width: auto; /* Ajusta el ancho automáticamente */
     text-align: center; /* Centra el texto */
   }
   .about-container {
@@ -199,6 +205,11 @@ h2 {
   nav ul {
     flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
     justify-content: space-around; /* Distribuye los elementos uniformemente */
+  }
+  nav li {
+    flex: 1 1 33%; /* Cada elemento ocupa un tercio del ancho */
+    display: flex;
+    justify-content: center;
   }
   nav a {
     padding: 0.5rem;
