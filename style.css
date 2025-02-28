@@ -31,7 +31,7 @@ body {
   Fondo oscuro y texto claro para cierto contraste
 */
 .bold-strong {
-  font-weight: 1200;
+  font-weight: 900;
 }
 
 header {
@@ -162,8 +162,11 @@ h2 {
   Reducimos padding y margenes para mejor encaje
 */
 @media (max-width: 768px) {
+  header {
+    padding: 0.5rem; /* Reduce el padding en dispositivos móviles */
+  }
   header h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Reduce el tamaño de la fuente en dispositivos móviles */
   }
   nav ul {
     flex-direction: column; /* Cambia la dirección a columna */
